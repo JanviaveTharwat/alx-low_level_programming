@@ -13,6 +13,5 @@ int main(void)
 	{
 		putchar((i % 10) + '0');
 	}
-	printf('\n');
 	return (0);
 }
