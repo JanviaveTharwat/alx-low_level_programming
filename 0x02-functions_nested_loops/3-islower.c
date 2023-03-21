@@ -2,6 +2,7 @@
 
 /**
  * _islower - Entry point
+ * @c checker for the functiom input
  * Return: 1 if true. 0 if false.
  */
 int _islower(int c)
