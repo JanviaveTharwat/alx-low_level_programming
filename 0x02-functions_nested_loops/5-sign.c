@@ -1,8 +1,10 @@
 #include "main.h"
+
 /**
- * print_sign-prints sign of a number
- * n: character to be verified
- * Return: return 0 or 1
+ * print_sign - Entr point
+ * @n: carrier variable
+ * Description: prints the sign of a number
+ * Return: 1 if n>0, 0 if n == 0, -1 if n<0
  */
 int print_sign(int n)
 {
