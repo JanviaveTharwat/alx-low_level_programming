@@ -15,7 +15,7 @@ int checker(int n, int m)
 	}
 	else if (m / 2 > n)
 	{
-		return (dchecker(n + 2, m));
+		return (checker(n + 2, m));
 	}
 	else
 	{
