@@ -23,7 +23,7 @@ int length(char *s)
  * @s: string
  * @a: smallest iterator
  * @b: biggest iterator
- * Return:
+ * Return:compares each character of the string
  */
 int compare(char *s, int a, int b)
 {
