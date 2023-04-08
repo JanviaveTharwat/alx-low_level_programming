@@ -11,19 +11,22 @@
 
 int main(int argc, char *argv[])
 {
-	int cents, coins = 0;
-
+	int cents, cash = 0;
+	
+	/*check point*/
 	if (argc != 2)
 	{
 		printf("Error\n");
 		return (1);
 	}
-
+	
+	/*atoi cov string to int*/
 	cents = atoi(argv[1]);
-
+	
+	/*while loop*/
 	while (cents > 0)
 	{
-		coins++;
+		cash++;
 		if ((cents - 25) >= 0)
 		{
 			cents -= 25;
@@ -46,6 +49,6 @@ int main(int argc, char *argv[])
 		}
 		cents--;
 	}
-	printf("%d\n", coins);
+	printf("%d\n", cash);
 	return (0);
 }
