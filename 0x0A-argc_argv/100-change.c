@@ -11,18 +11,15 @@
 
 int main(int argc, char *argv[])
 {
-	int cents, cash = 0;
-	
+	int cents, cash = 0;	
 	/*check point*/
 	if (argc != 2)
 	{
 		printf("Error\n");
 		return (1);
 	}
-	
 	/*atoi cov string to int*/
 	cents = atoi(argv[1]);
-	
 	/*while loop*/
 	while (cents > 0)
 	{
