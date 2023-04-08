@@ -11,7 +11,7 @@
 
 int main(int argc, char *argv[])
 {
-	int cents, cash = 0;	
+	int cents, cash = 0;
 	/*check point*/
 	if (argc != 2)
 	{
