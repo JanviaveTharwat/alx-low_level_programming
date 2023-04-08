@@ -11,34 +11,41 @@
 
 int main(int argc, char *argv[])
 {
-	if (argc == 2)
-	{
-		 int a, min = 0;
-		 /*atoi conv sting to intiger*/
-		 int cash = atoi(argv[1]);
-		 int cents [] = {25, 10, 5, 2, 1};
+	int cents, coins = 0;
 
-		 /*for loop will execude till its break point*/
-		 for (a 0; a < 5 ; a++)
-		 {
-			 /*if statment (loop condition*/
-			 if (cash >= cents[a])
-			 {
-				 min += cash / cents[a];
-				 cash = cash % cents[a];
-				 /*break case*/
-				 if (cash % cents[a] == 0)
-				 {
-					 break;
-				 }
-			 }
-		 }
-		 printf("%d\n", min);
-	}
-	else
+	if (argc != 2)
 	{
 		printf("Error\n");
 		return (1);
 	}
+
+	cents = atoi(argv[1]);
+
+	while (cents > 0)
+	{
+		coins++;
+		if ((cents - 25) >= 0)
+		{
+			cents -= 25;
+			continue;
+		}
+		if ((cents - 10) >= 0)
+		{
+			cents -= 10;
+			continue;
+		}
+		if ((cents - 5) >= 0)
+		{
+			cents -= 5;
+			continue;
+		}
+		if ((cents - 2) >= 0)
+		{
+			cents -= 2;
+			continue;
+		}
+		cents--;
+	}
+	printf("%d\n", coins);
 	return (0);
 }
