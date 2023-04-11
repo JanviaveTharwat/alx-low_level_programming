@@ -17,7 +17,7 @@ if (str == NULL)
 return (NULL);
 
 for (; str[b] != '\0'; b++)
-  ;
+;
 new = malloc(b * sizeof(*str) + 1);
 
 if (new == 0)
