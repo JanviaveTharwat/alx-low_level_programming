@@ -10,7 +10,7 @@
 
 void wright(char *abc)
 {
-	int a = 0 ;
+	int a = 0;
 
 	while (abc[a])
 	{
