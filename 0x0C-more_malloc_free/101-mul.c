@@ -60,7 +60,7 @@ void text(unsigned long int c)
 		j = c / d;
 		_putchar('0' + j);
 	}
-	for (; c /d > 9; i++, d *= 10)
+	for (; c / d > 9; i++, d *= 10)
 		;
 }
 
