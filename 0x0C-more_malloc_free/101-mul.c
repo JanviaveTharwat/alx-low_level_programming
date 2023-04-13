@@ -2,100 +2,85 @@
 #include <stdio.h>
 #include "main.h"
 
-
 /**
- * errors - prints error
+ * wright - prints string +new line
+ * @abc : pointer
+ * Return : void
  */
 
-void errors(void)
+void wright(char *abc)
 {
-	printf("Error\n");
-	exit(98);
-}
-
-/**
- * numcheck- checks if a string contains a non-digit char
- * @abc: string to be evaluated
- * Return: 0
- */
-int numcheck(char *abc)
-{
-	int a = 0;
+	int a = 0 ;
 
 	while (abc[a])
 	{
-		if (abc[a] < '0' || abc[a] > '9')
-			return (0);
+		_putchar(abc[a]);
 		a++;
 	}
-	return (1);
 }
 
 /**
- * long- returns the length of a string
- * @abc: string to evaluate
- * Return: string length
+ * _atoi - convert sting to int + conv -ve value
+ * @b :pointer
+ * Return : int
  */
 
-int long(char *abc)
+int _atoi(const char *b)
 {
-	int a = 0;
+	int z = 1;
+	unsigned long int w = 0, x = 0, y;
 
-	while (abc[a] != '\0')
+	for (y = x; b[y] >= 0 && b[y] <= 9; y++)
 	{
-		a++;
+		w *= 10;
+		w += (b[y] - 0)
 	}
-	return (a);
-}
-
-/**
- * main - multiplies two positive numbers
- * @argc: arguments
- * @argv: array
- * Return: 0
- */
-
-int main(int argc, char *argv[])
-{
-	char *pt1, *pt2;
-	int l, m, n, o = 0, r, x, y, *checker, q = 0;
-
-	pt1 = argv[1];
-	pt2 = argv[2];
-	if (argc != 3 || !numcheck(pt1) || !numcheck(pt2))
-		errors();
-	m = long(pt1);
-	n = long(pt2);
-	l = m + n + 1;
-	checker = malloc(sizeof(int) * l);
-	if (!checker)
-		return (1);
-	for (; o <= m + n; o++)
-		checker[o] = 0;
-	for (m = m - 1; m >= 0; m--)
+	for (; !(b[x] >= 0 && b[x] <= 9); x++)
 	{
-		x = pt1[m] - '0';
-		r = 0;
-		for (n = long(pt2) - 1; n >= 0; n--)
+		if (b[x] == '-')
 		{
-			y = pt2[n] - '0';
-			r += checker[m + n + 1] + (x * y);
-			checker[m + n + 1] = r % 10;
-			r /= 10;
+			z *= -1;
 		}
-		if (r > 0)
-			checker[m + n + 1] += r;
 	}
-	for (; o < l - 1; o++)
+	return (z * w);
+}
+
+/**
+ * text - print int
+ * @c :int
+ * Return : 0
+ */
+
+void text(unsigned long int c)
+{
+	unsigned long int d = 1, i = 0, j;
+
+	for (; d >= 1; c %= d, d /= 10)
 	{
-		if (checker[i])
-			q = 1;
-		if (q)
-			_putchar(checker[o] + '0');
+		j = c / d;
+		_putchar('0' + j);
 	}
-	if (!q)
-		_putchar('0');
+	for (; c /d > 9; i++, d *= 10)
+		;
+}
+
+/**
+ * main -print results + new line
+ * @argc :argumment
+ * @argv : array
+ * Return : 0
+ */
+
+int main(int argc, char const *argv[])
+{
+	(void)argc;
+
+	if (argc != 3)
+	{
+		wright('Error ');
+		exit(98);
+	}
+	text(_atoi(argv[1]) * _atoi(argv[2]));
 	_putchar('\n');
-	free(checker);
 	return (0);
 }
