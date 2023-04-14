@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <string.h>
 #include "main.h"
-
+#define ERR_MSG "Error"
 
 /**
  * Dcheck -check if its digit
