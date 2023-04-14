@@ -13,11 +13,11 @@ void errors(void)
 }
 
 
-**
+/**
 * is_digit - checks digit char
 * @d: string
 * Return: 0  or 1
- */
+*/
 int is_digit(char *d)
 {
 int z = 0;
