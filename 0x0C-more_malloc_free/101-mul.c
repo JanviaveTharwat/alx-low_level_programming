@@ -74,7 +74,7 @@ carry = 0;
 for (len2 = _strlen(s2) - 1; len2 >= 0; len2--)
 {
 digit2 = s2[len2] - '0';
-digit_mult = digit1 * digit2;
+digit_mult = digit1 *digit2;
 carry += result[len1 + len2 + 1] + digit_mult;
 result[len1 + len2 + 1] = carry % 10;
 carry /= 10;
