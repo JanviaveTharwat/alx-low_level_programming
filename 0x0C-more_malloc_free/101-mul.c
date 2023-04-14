@@ -59,7 +59,7 @@ int main(int argc, char *argv[])
 char *s1, *s2;
 int lm, ln, l, i, c, p, q, *pt, a = 0;
 
-s1 = argv[1];s2 = argv[2];
+s1 = argv[1], s2 = argv[2];
 if (argc != 3 || !is_digit(s1) || !is_digit(s2))
 errors();
 lm = _strlen(s1);
@@ -77,7 +77,7 @@ c = 0;
 for (ln = _strlen(s2) - 1; ln >= 0; ln--)
 {
 q = s2[ln] - '0';
-c += pt[lm ln + 1] + (p * q);
+c += pt[lm + ln + 1] + (p * q);
 pt[lm + ln + 1] = c % 10;
 c /= 10;
 }
