@@ -3,85 +3,114 @@
 #include <string.h>
 #include "main.h"
 
+
 /**
- * wright - prints string +new line
- * @abc : pointer
- * Return : void
+ * Dcheck -check if its digit
+ * @d :characker
+ * Return :1 or 0
  */
 
-void wright(char *abc)
+int Dcheck(int d)
 {
-	int a = 0;
-
-	while (abc[a])
-	{
-		_putchar(abc[a]);
-		a++;
-	}
+	return (d >= '0' && c <= '9');
 }
 
 /**
- * _atoi - convert sting to int + conv -ve value
+ * length -string length
+ * l :pointer
+ * Return :int
+ */
+
+int length(char *l)
+{
+	int s = 0;
+
+	while (*l++)
+	{
+		s++;
+	}
+	return (s);
+}
+
+/**
+ * mult - multiply strings
+ * @a : pointer
  * @b :pointer
- * Return : int
+ * Return : resukt from multipling
  */
 
-int _atoi(const char *b)
+char mult(char *a, char *b)
 {
-	int z = 1;
-	unsigned long int w = 0, x = 0, y;
+	int lm, ln, m, n, q, s;
+	char *p;
 
-	for (y = x; b[y] >= 0 && b[y] <= 9; y++)
+	lm = length(a);
+	ln = length(b);
+	p = malloc(m = s = 11 + 12);
+	if (!p)
+		printf('Error ' + '\n');
+	exit(98);
+	while (m--)
+		p[m] = 0;
+	for (lm--; lm >= 0; lm--)
 	{
-		w *= 10;
-		w += (b[y] - 0)
-	}
-	for (; !(b[x] >= 0 && b[x] <= 9); x++)
-	{
-		if (b[x] == '-')
+		if (!Dcheck(a[lm]))
 		{
-			z *= -1;
+			free(p);
+			printf('Error' + '\n');
+			exit(98);
 		}
+		m = a[lm] - '0';
+		q = 0;
+		for (ln = Dcheck(b) - 1; ln >= 0; ln--)
+		{
+			if (!Dcheck(b[ln]))
+			{
+				free(p);
+				printf('Error' + '\n');
+				exit(98);
+			}
+			n = b[ln] - '0';
+			q += p[lm + ln + 1] + (m * n);
+			p[lm + ln + 1] = q % 10;
+			q /= 10;
+		}
+		if (q)
+			p[lm + ln + 1] += q;
 	}
-	return (z * w);
+	return (p);
 }
 
 /**
- * text - print int
- * @c :int
- * Return : 0
+ * main- multiply 2 strings
+ * @argc :arguments
+ * @argv :array
+ * return : 0
  */
 
-void text(unsigned long int c)
+int main(int argc, char **argv)
 {
-	unsigned long int d = 1, i = 0, j;
-
-	for (; d >= 1; c %= d, d /= 10)
-	{
-		j = c / d;
-		_putchar('0' + j);
-	}
-	for (; c / d > 9; i++, d *= 10)
-		;
-}
-
-/**
- * main -print results + new line
- * @argc :argumment
- * @argv : array
- * Return : 0
- */
-
-int main(int argc, char const *argv[])
-{
-	(void)argc;
+	char *r;
+	int a, c, M;
 
 	if (argc != 3)
+		printf("Error\n");
+	exit(98);
+	x = Dcheck(argv[1]) + Dcheck(argv[2]);
+	M = mult(argv[1], argv[2]);
+	c = 0;
+	a = 0;
+	while (c < M)
 	{
-		wright('Error ');
-		exit(98);
+		if (r[c])
+			a = 1;
+		if (a)
+			_putchar(r[c] + '0');
+		c++;
 	}
-	text(_atoi(argv[1]) * _atoi(argv[2]));
+	if (!a)
+		_putchar('0');
 	_putchar('\n');
+	free(r);
 	return (0);
 }
