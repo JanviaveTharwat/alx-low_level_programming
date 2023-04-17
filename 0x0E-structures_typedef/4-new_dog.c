@@ -16,7 +16,6 @@ int _strlen(char *str)
 
 	while (*str++)
 		len++;
-
 	return (len);
 }
 
@@ -34,11 +33,10 @@ char *_strcopy(char *dest, char *src)
 
 	for (index = 0; src[index]; index++)
 		dest[index] = src[index];
-
 	dest[index] = '\0';
-
 	return (dest);
 }
+
 
 /**
  * new_dog - new dog
