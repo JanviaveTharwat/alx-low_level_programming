@@ -70,7 +70,7 @@ void print_all(const char * const format, ...)
 	va_list ls;
 	int i = 0, j;
 	char *sp = "";
-	print_func fp = {
+	print_funcs fp = {
 		{"c", print_char},
 		{"i", print_int},
 		{"f", print_float},
@@ -87,7 +87,7 @@ void print_all(const char * const format, ...)
 		if (j < 4)
 		{
 			printf("%s", sp);
-			fp.print_func(ls);
+			fp.print_funcs(ls);
 			sp = ", ";
 		}
 		i++;
