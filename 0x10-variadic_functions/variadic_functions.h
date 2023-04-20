@@ -12,4 +12,10 @@ void print_strings(const char *separator, const unsigned int n, ...);
 void print_all(const char * const format, ...);
 
 
+typedef struct print
+{
+	char *symbol;
+	void (*print_func)(va_list arg);
+} print_funcs;
+
 #endif
