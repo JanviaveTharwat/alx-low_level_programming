@@ -28,6 +28,6 @@ void free_list(list_t *head);
 
 
 int _strlen(const char *st);
-int _putchar(char c);
+unsigned int _strlen(char *st);
 
 #endif
