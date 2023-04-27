@@ -18,7 +18,7 @@ int _strlen(char *st)
 }
 
 /**
- * print_list - prints linked lists
+ * print_list - prints linked list
  * @h : pointer
  * Retuen : list size
  */
