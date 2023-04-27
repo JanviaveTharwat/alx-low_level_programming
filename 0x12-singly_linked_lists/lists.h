@@ -27,4 +27,7 @@ list_t *add_node_end(list_t **head, const char *str);
 void free_list(list_t *head);
 void _constructir(void)_atrtribute_((constructor));
 
+int _strlen(char *st);
+int _putchar(char c);
+
 #endif
