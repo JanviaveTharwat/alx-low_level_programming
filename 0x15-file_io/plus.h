@@ -1,3 +1,6 @@
+#ifndef PLUS_H
+#define PLUS_H
+
 #include <elf.h>
 #include <stdio.h>
 #include <unistd.h>
@@ -103,3 +106,4 @@ void print_osabi(char *ptr)
 }
 
 
+#endif
