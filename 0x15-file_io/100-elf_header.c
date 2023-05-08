@@ -1,4 +1,4 @@
-#include "elf_header_plus.c"
+#include "plus.h"
 #include <elf.h>
 #include <stdio.h>
 #include <unistd.h>
