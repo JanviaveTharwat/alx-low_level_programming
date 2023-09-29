@@ -1,14 +1,13 @@
 #include "main.h"
-
+#include <stdio.h>
 
 /**
- * error_file - checks if files can be opened
- * @file_from: file_from
- * @file_to: file_to
- * @argv: arguments vector
- * Return: void
+ * error_file - checks if files can be opened.
+ * @file_from: file_from.
+ * @file_to: file_to.
+ * @argv: arguments vector.
+ * Return: no return.
  */
-
 void error_file(int file_from, int file_to, char *argv[])
 {
 	if (file_from == -1)
@@ -24,12 +23,11 @@ void error_file(int file_from, int file_to, char *argv[])
 }
 
 /**
- * main - check the code
- * @argc: number of arguments
- * @argv: arguments
- * Return:  0
+ * main - check the code for Holberton School students.
+ * @argc: number of arguments.
+ * @argv: arguments vector.
+ * Return: Always 0.
  */
-
 int main(int argc, char *argv[])
 {
 	int file_from, file_to, err_close;
