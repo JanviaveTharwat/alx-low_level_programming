@@ -19,6 +19,21 @@ void print_type(unsigned int e_type, unsigned char *e_ident);
 void print_entry(unsigned long int e_entry, unsigned char *e_ident);
 void close_elf(int elf);
 
+/**
+ * close_elf - Closes an ELF file.
+ * @elf: The file descriptor of the ELF file.
+ *
+ * Description: If the file cannot be closed - exit code 98.
+ */
+void close_elf(int elf)
+{
+	if (close(elf) == -1)
+	{
+		dprintf(STDERR_FILENO,
+			"Error: Can't close fd %d\n", elf);
+		exit(98);
+	}
+}
 
 /**
  * main - Displays the information contained in the
